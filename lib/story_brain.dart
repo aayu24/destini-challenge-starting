@@ -4,6 +4,7 @@ import 'story.dart';
 //COMPLETED: Step 5 - Create a new class called StoryBrain.
 
 //COMPLETED: Step 7 - Uncomment the lines below to include storyData as a private property in StoryBrain. Hint: You might need to change something in story.dart to make this work.
+//TODO: Add a bigger storyline
 
 class StoryBrain {
   int _storyNumber = 0;
@@ -86,6 +87,10 @@ class StoryBrain {
         break;
     }
   }
+
+  bool buttonShouldBeVisible() {
+    return (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2);
+  }
 }
 //COMPLETED: Step 23 - Use the storyNumber property inside getStory(), getChoice1() and getChoice2() so that it gets the updated story and choices rather than always just the first (0th) one.
 
@@ -95,7 +100,7 @@ class StoryBrain {
 
 //COMPLETED: Step 12 - Create a method called getChoice2() that returns the text for the first choice2 from _storyData.
 
-//TODO: Step 25 - Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
+//COMPLETED: Step 25 - Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
 
 //COMPLETED: Step 16 - Create a property called storyNumber which starts with a value of 0. This will be used to track which story the user is currently viewing.
 
@@ -107,4 +112,4 @@ class StoryBrain {
 
 //COMPLETED: Step 22 - In nextStory() if the storyNumber is equal to 3 or 4 or 5, that means it's the end of the game and it should call a method called restart() that resets the storyNumber to 0.
 
-//TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
+//COMPLETED: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
