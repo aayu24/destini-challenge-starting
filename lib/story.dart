@@ -7,9 +7,17 @@ class Story {
   String _storyTitle;
   String _choice1, _choice2;
 
-  Story(title, ch1, ch2) {
-    _storyTitle = title;
-    _choice1 = ch1;
-    _choice2 = ch2;
+  Story({storyTitle, choice1, choice2}) {
+    _storyTitle = storyTitle;
+    _choice1 = choice1;
+    _choice2 = choice2;
   }
+
+  String get choice2 {
+    return _choice2;
+  }
+
+  //shorthand notation for getters in flutter
+  String get choice1 => _choice1;
+  String get storyTitle => _storyTitle;
 }
