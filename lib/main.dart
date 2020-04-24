@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 //COMPLETED: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this COMPLETED if it looks as you expected.
 
+//TODO: Step 32 - Add soundtrack to the app
 void main() => runApp(Destini());
 
 class Destini extends StatelessWidget {
@@ -28,11 +29,11 @@ class _StoryPageState extends State<StoryPage> {
     return Scaffold(
       body: Container(
         //COMPLETED: Step 1 - Add background.png to this Container as a background image.
-        //TODO: Step 31 - Add own custom background image
+        //COMPLETED: Step 31 - Add own custom background image
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/background.png'),
-            fit: BoxFit.cover,
+            image: AssetImage('images/mystery_background.jpg'),
+            fit: BoxFit.fill,
           ),
         ),
         padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
@@ -47,8 +48,9 @@ class _StoryPageState extends State<StoryPage> {
                   child: Text(
                     //COMPLETED: Step 10 - use the storyBrain to get the first story title and display it in this Text Widget.
                     storyBrain.getStory(),
-                    //TODO: Step 30 - style the text to make it look better
+                    //COMPLETED: Step 30 - style the text to make it look better
                     style: TextStyle(
+                      fontFamily: 'MysteryQuest',
                       fontSize: 25.0,
                     ),
                   ),
